@@ -9,8 +9,14 @@ title: 11ty Boilerplate
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }}</title>
   <link rel="stylesheet" href="/styles/screen.css">
+  <script src="/assets/js/main.js" defer></script>
 </head>
 <body>
+    <div x-data="randomNameGenerator()">
+        <h1>Random Name Generator</h1>
+        <button @click="generateName">Generate Name</button>
+        <p x-text="randomName"></p>
+    </div>
   <nav>
     <ul>
       <li><a href="/" title="Go home">Home</a></li>
@@ -20,3 +26,4 @@ title: 11ty Boilerplate
     {{ content }}
 </body>
 </html>
+
